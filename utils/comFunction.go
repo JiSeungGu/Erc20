@@ -11,8 +11,8 @@ import (
 	"github.com/hyperledger/fabric-chaincode-go/shim"
 	sc "github.com/hyperledger/fabric-protos-go/peer"
 
-	"github.com/jinsan74/Erc20/model"
-	"github.com/jinsan74/Erc20/wallet"
+	"github.com/JiSeungGu/Erc20/model"
+	"github.com/JiSeungGu/Erc20/wallet"
 )
 
 // var logger = shim.NewLogger("sto-logger")
