@@ -1,12 +1,5 @@
 package wallet
 
-import (
-	"encoding/json"
-	"fmt"
-
-	"github.com/hyperledger/fabric-chaincode-go/shim"
-)
-
 // TransferMeta is Multi Transfer를 이용하기 위한 데이터 구조체
 type TransferMeta struct {
 	Address string `json:"address"`
@@ -30,23 +23,23 @@ type WalletMeta struct {
 }
 
 // CallVaildWallet is vaildWallet 호출 함수
-func CallVaildWallet(stub shim.ChaincodeStubInterface) []string {
+// func CallVaildWallet(stub shim.ChaincodeStubInterface) []string {
 
-	_, orgParam := stub.GetFunctionAndParameters()
+// 	_, orgParam := stub.GetFunctionAndParameters()
 
-	nowTimestamp, _ := stub.GetTxTimestamp()
-	nowTime := nowTimestamp.GetSeconds()
+// 	nowTimestamp, _ := stub.GetTxTimestamp()
+// 	nowTime := nowTimestamp.GetSeconds()
 
-	walletMeta := WalletMeta{}
-	json.Unmarshal([]byte(orgParam[0]), &walletMeta)
-	walletMeta.Nowtime = nowTime
+// 	walletMeta := WalletMeta{}
+// 	json.Unmarshal([]byte(orgParam[0]), &walletMeta)
+// 	walletMeta.Nowtime = nowTime
 
-	retParams, err := vaildWallet(walletMeta)
+// 	retParams, err := vaildWallet(walletMeta)
 
-	if err != nil {
-		fmt.Println("Call VaildWallet ERR...", err.Error())
-		return nil
-	}
+// 	if err != nil {
+// 		fmt.Println("Call VaildWallet ERR...", err.Error())
+// 		return nil
+// 	}
 
-	return retParams
-}
+// 	return retParams
+// }
