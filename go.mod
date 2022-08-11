@@ -1,6 +1,6 @@
 module github.com/JiSeungGu/Erc20
 
-go 1.17
+go 1.13
 
 //require github.com/hyperledger/fabric v2.2.4+incompatible // indirect
 
